@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2974A89E-B006-405C-AB7B-CB4213CF295F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClinicaMascotas</RootNamespace>
+    <AssemblyName>ClinicaMascotas</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin2">
+      <HintPath>..\Componentes Graficos Vb2\Componentes Graficos Vb2\SKIN NET 2010 WIN 7\SkinVS.NET\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 6.9.6\Assemblies\v2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\CeldaBO.cs" />
+    <Compile Include="BO\ClienteBO.cs" />
+    <Compile Include="BO\EstadoBO.cs" />
+    <Compile Include="BO\MascotaBO.cs" />
+    <Compile Include="BO\PersonalBO.cs" />
+    <Compile Include="BO\ServicioBO.cs" />
+    <Compile Include="BO\VeterinarioBO.cs" />
+    <Compile Include="Class\CalcularServicio.cs" />
+    <Compile Include="cmascotasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmascotasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmascotasDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmascotasDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmascotasDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmascotasDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmascotasDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmascotasDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CeldaCONTROL.cs" />
+    <Compile Include="Control\ClienteCONTROL.cs" />
+    <Compile Include="Control\EstadoCONTROL.cs" />
+    <Compile Include="Control\MascotaCONTROL.cs" />
+    <Compile Include="Control\PersonalCONTROL.cs" />
+    <Compile Include="Control\ServicioCONTROL.cs" />
+    <Compile Include="Control\VeterinarioCONTROL.cs" />
+    <Compile Include="DAO\CeldaDAO.cs" />
+    <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\Conexion.cs" />
+    <Compile Include="DAO\EstadoDAO.cs" />
+    <Compile Include="DAO\MascotaDAO.cs" />
+    <Compile Include="DAO\PersonalDAO.cs" />
+    <Compile Include="DAO\ServicioDAO.cs" />
+    <Compile Include="DAO\VeterinarioDAO.cs" />
+    <Compile Include="GUI\Celdas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Celdas.Designer.cs">
+      <DependentUpon>Celdas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EliminarRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EliminarRegistro.Designer.cs">
+      <DependentUpon>EliminarRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionC.Designer.cs">
+      <DependentUpon>GestionC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Mascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Mascota.Designer.cs">
+      <DependentUpon>Mascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RegistrarPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RegistrarPersonal.Designer.cs">
+      <DependentUpon>RegistrarPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RegistroNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RegistroNuevo.Designer.cs">
+      <DependentUpon>RegistroNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PaginaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PaginaPrincipal.Designer.cs">
+      <DependentUpon>PaginaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Servicios.Designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Celdas.resx">
+      <DependentUpon>Celdas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EliminarRegistro.resx">
+      <DependentUpon>EliminarRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionC.resx">
+      <DependentUpon>GestionC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Mascota.resx">
+      <DependentUpon>Mascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RegistrarPersonal.resx">
+      <DependentUpon>RegistrarPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RegistroNuevo.resx">
+      <DependentUpon>RegistroNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PaginaPrincipal.resx">
+      <DependentUpon>PaginaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Servicios.resx">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="cmascotasDataSet.xsc">
+      <DependentUpon>cmascotasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cmascotasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmascotasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmascotasDataSet.xss">
+      <DependentUpon>cmascotasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cmascotasDataSet1.xsc">
+      <DependentUpon>cmascotasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cmascotasDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmascotasDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmascotasDataSet1.xss">
+      <DependentUpon>cmascotasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cmascotasDataSet2.xsc">
+      <DependentUpon>cmascotasDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="cmascotasDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmascotasDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmascotasDataSet2.xss">
+      <DependentUpon>cmascotasDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="cmascotasDataSet3.xsc">
+      <DependentUpon>cmascotasDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cmascotasDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmascotasDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmascotasDataSet3.xss">
+      <DependentUpon>cmascotasDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IM\Mascotas\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
